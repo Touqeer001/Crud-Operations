@@ -1,9 +1,9 @@
-
-const AllUser=()=>{
-    return(    <>
-        <p>This IS all User </p>    
-        </>)
-
-}
+const AllUser = () => {
+  return (
+    <>
+      <p>This IS all User.... </p>
+    </>
+  );
+};
 
 export default AllUser;

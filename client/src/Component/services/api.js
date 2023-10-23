@@ -6,4 +6,9 @@ export const addUser = async (data) => {
   } catch (error) {
     console.log("Eroor while calling the Api addUser", error);
   }
+
+  //FOr practicing purpose
+  export const addUsers = (async) => {
+    axios.post(`${Url}/add`, data);
+  };
 };

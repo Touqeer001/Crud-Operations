@@ -12,3 +12,14 @@ try{
 
 }
 export default Connection;
+
+
+//For PRacticing Purpose..
+const COnnections=()=>{
+    const mongodbURl='';
+    try{
+        await mongoose.connect(URL,{});
+
+
+    }
+}
