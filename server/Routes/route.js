@@ -1,12 +1,7 @@
 import express from "express";
+import { addUser } from "../controller/user-controller";
+
 const router = express.Router();
-router.post("/add", () => {
-  console.log("Hello...");
-});
+
+router.post("/add", addUser);
 export default router;
-
-//Practicing Purpose
-
-const routers = express.Router();
-router.post("/add", (callFunction rehta h isko banate h controller folder menubar.visible.) => {});
-console.log("Hello...");...
