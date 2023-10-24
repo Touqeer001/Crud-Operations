@@ -2,6 +2,7 @@ import express from "express";
 import Connection from "./database/db.js";
 import dotenv from "dotenv";
 import router from "./Routes/route.js";
+import bodyParser from "body-parser";
 
 const app = express();
 dotenv.config();
@@ -10,6 +11,8 @@ const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 
 // ROuting
+app.use(bodyParser.json({ extended: true })); //ye karne se payload me body show hone lagi gi..
+app.use(bodyParser.urlencoded({ extended: true })); //urlencode ka used url ko encode krne ke liye hota h..ye url ke liye hota ha
 app.use("/", router);
 
 Connection(username, password);
