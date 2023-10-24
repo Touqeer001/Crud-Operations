@@ -69,28 +69,3 @@ const AddUser = (e) => {
 };
 
 export default AddUser;
-
-<Container>
-  <Typography variant="h4">Add User</Typography>
-  <FormControl>
-    <InputLabel>Name</InputLabel>
-    <Input onChange={(e) => OnValueChange(e)} name="name" />
-  </FormControl>
-  <FormControl>
-    <InputLabel>UserName</InputLabel>
-    <Input onChange={(e) => OnValueChange(e)} name="UserName" />
-  </FormControl>
-  <FormControl>
-    <InputLabel>Email</InputLabel>
-    <Input onChange={(e) => OnValueChange(e)} name="Email" />
-  </FormControl>
-  <FormControl>
-    <InputLabel>Phone</InputLabel>
-    <Input onChange={(e) => OnValueChange(e)} name="phone" />
-  </FormControl>
-  <FormControl>
-    <Button variant="contained" onClick={() => addUserDetails()}>
-      Add User
-    </Button>
-  </FormControl>
-</Container>;
