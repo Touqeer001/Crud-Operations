@@ -1,5 +1,7 @@
 // this file contain all call back function
 
+import { request, response } from "express";
+
 // backend se frontend pe bhejne ke liye response ka used krte h
 //request me wo sab aata h jo api ke saath front end se bheja jata hai...
 //Post APi ke saath Body Bheja jata hai...
@@ -9,4 +11,10 @@
 export const addUser = (request, response) => {
   const user = request.body;
   console.log(user);
+};
+
+//for practicing
+export const allUser = (request, response) => {
+  const alluser = request.body;
+  console.log();
 };
