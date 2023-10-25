@@ -2,6 +2,7 @@ import express from "express";
 import Connection from "./database/db.js";
 import dotenv from "dotenv";
 import router from "./Routes/route.js";
+// import bodyParser from "body-parser";
 import bodyParser from "body-parser";
 
 const app = express();
@@ -17,4 +18,5 @@ app.use("/", router);
 
 Connection(username, password);
 
+// app.listen(PORT, () => console.log(`SErver is Runnning on ${PORT}`));
 app.listen(PORT, () => console.log(`SErver is Runnning on ${PORT}`));
