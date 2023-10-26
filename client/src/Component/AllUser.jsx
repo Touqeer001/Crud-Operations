@@ -1,7 +1,7 @@
 const AllUser = () => {
   return (
     <>
-      <p>This IS all User. </p>
+      <p>This IS all User.......... </p>
     </>
   );
 };
