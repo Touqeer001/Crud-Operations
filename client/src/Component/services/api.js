@@ -9,7 +9,7 @@ export const addUser = async (data) => {
 };
 
 
-//for practis
+//for practis...
 export const alUSer=async()=>{
   try{
     await axios.post(`${Url}/all`,data)
