@@ -18,5 +18,5 @@ app.use("/", router);
 
 Connection(username, password);
 
-// app.listen(PORT, () => console.log(`SErver is Runnning on ${PORT}`));
 app.listen(PORT, () => console.log(`SErver is Runnning on ${PORT}`));
+// app.listen(PORT, () => console.log(`SErver is Runnning on ${PORT}`));
