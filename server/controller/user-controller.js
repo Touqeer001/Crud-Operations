@@ -13,7 +13,7 @@ export const addUser = (request, response) => {
   console.log(user);
 };
 
-//for practicing....
+//for practicing..
 export const allUser = (request, response) => {
   const alluser = request.body;
   console.log();
