@@ -30,7 +30,7 @@ const NavBar = () => {
 
 export default NavBar;
 
-//for practics....
+//for practics.....
 const NavBar = () => {
   return (
     <>
