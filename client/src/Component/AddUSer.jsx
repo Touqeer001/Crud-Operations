@@ -72,7 +72,7 @@ export default AddUser;
 
 
 
-//for practicss..........
+//for practicss............
 return (
   <>
     <Container>
