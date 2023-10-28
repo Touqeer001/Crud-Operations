@@ -11,9 +11,9 @@ const PORT = 8000;
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 
-// ROuting
+// ROuting..
 app.use(bodyParser.json({ extended: true })); //ye karne se payload me body show hone lagi gi..
-app.use(bodyParser.urlencoded({ extended: true })); //urlencode ka used url ko encode krne ke liye hota h..ye url ke liye hota ha
+app.use(bodyParser.urlencoded({ extended: true })); //url encode ka used url ko encode krne ke liye hota h..ye url ke liye hota ha
 app.use("/", router);
 
 Connection(username, password);
