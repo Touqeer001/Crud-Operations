@@ -1,6 +1,6 @@
 // this file contain all call back function
 
-import { request, response } from "express";
+// import express from "express";
 
 // backend se frontend pe bhejne ke liye response ka used krte h
 //request me wo sab aata h jo api ke saath front end se bheja jata hai...
