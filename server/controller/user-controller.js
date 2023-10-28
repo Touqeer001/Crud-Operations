@@ -12,9 +12,3 @@ export const addUser = (request, response) => {
   const user = request.body;
   console.log(user);
 };
-
-//for practicing..
-export const allUser = (request, response) => {
-  const alluser = request.body;
-  console.log();
-};
