@@ -1,3 +1,5 @@
+//Calling all api
+
 import axios from "axios";
 const Url = "http://localhost:8000";
 export const addUser = async (data) => {
