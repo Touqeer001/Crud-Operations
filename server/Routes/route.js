@@ -1,4 +1,6 @@
-import express from "express";
+i//All Routes Calling..
+
+mport express from "express";
 import { addUser } from "../controller/user-controller.js";
 
 const router = express.Router();
