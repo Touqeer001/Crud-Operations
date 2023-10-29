@@ -2,6 +2,7 @@ import AddUser from "./Component/AddUSer";
 import AllUser from "./Component/AllUser";
 import CrudOperation from "./Component/CrudOpearion";
 import NavBar from "./Component/NavBar";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
