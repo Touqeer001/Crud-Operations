@@ -9,3 +9,13 @@ export const addUser = async (data) => {
     console.log("Eroor while calling the Api addUser", error);
   }
 };
+
+// DataBase me se data ko nikalne ke leye GET APi ka used krte handleBreakpoints...
+
+export const getUsers = async () => {
+  try {
+    return await axios.get(`${Url}/all`);
+  } catch (error) {
+    console.log("Eroor while callint getUSer api", error);
+  }
+};
