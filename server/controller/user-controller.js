@@ -25,3 +25,11 @@ export const addUser = async (request, response) => {
 };
 
 //
+export const getUsers = async (request, response) => {
+  try {
+    const users = await User.find({}); //jitna bhi data database me save h wo sare data ko show kr dega..
+    response.status(200).json(users);
+  } catch (error) {
+    response.status(404).json({ message: error.message });
+  }
+};
