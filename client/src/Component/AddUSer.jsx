@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { useState } from "react";
 
 import { addUser } from "./services/api";
+import { useNavigate } from "react-router-dom";
 import {
   FormGroup,
   FormControl,
@@ -30,6 +31,8 @@ const UserDefault = {
 const AddUser = (e) => {
   const [user, setUser] = useState({ UserDefault });
 
+  const navigate = useNavigate(); //useNavigate ka used is liye krte h ke ager button pe click krte hi jo appi call ho rhi h wha pe chala jaye.
+
   const OnValueChange = (e) => {
     console.log(e.target.name, e.target.value);
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -38,6 +41,7 @@ const AddUser = (e) => {
 
   const addUserDetails = async () => {
     await addUser(user);
+    navigate("/all");
   };
 
   return (
@@ -50,7 +54,7 @@ const AddUser = (e) => {
         </FormControl>
         <FormControl>
           <InputLabel>UserName</InputLabel>
-          <Input onChange={(e) => OnValueChange(e)} name="userName" />
+          <Input onChange={(e) => OnValueChange(e)} name="username" />
         </FormControl>
         <FormControl>
           <InputLabel>Email</InputLabel>
