@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
+
+import { addUser } from "./services/api";
 import {
   FormGroup,
   FormControl,
@@ -8,7 +10,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import { addUser } from "./services/api";
+
 const Container = styled(FormGroup)`
   width: 50%;
 
@@ -35,7 +37,7 @@ const AddUser = (e) => {
   };
 
   const addUserDetails = async () => {
-    await addUser();
+    await addUser(user);
   };
 
   return (
@@ -48,11 +50,11 @@ const AddUser = (e) => {
         </FormControl>
         <FormControl>
           <InputLabel>UserName</InputLabel>
-          <Input onChange={(e) => OnValueChange(e)} name="UserName" />
+          <Input onChange={(e) => OnValueChange(e)} name="userName" />
         </FormControl>
         <FormControl>
           <InputLabel>Email</InputLabel>
-          <Input onChange={(e) => OnValueChange(e)} name="Email" />
+          <Input onChange={(e) => OnValueChange(e)} name="email" />
         </FormControl>
         <FormControl>
           <InputLabel>Phone</InputLabel>
