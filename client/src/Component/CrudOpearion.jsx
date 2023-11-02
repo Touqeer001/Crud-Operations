@@ -1,7 +1,7 @@
 const CrudOperation = () => {
   return (
     <>
-      <p>This IS CrudOperation page.....</p>
+      <p>This IS CrudOperation page....</p>
     </>
   );
 };
