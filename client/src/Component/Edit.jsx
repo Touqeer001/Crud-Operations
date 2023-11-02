@@ -38,13 +38,13 @@ const EditUser = (e) => {
   }, []);
 
   const loadUserDetails = async () => {
-    const response = await getUser(id);
+    let response = await getUser(id);
+    setUser(response.data);
   };
 
   const OnValueChange = (e) => {
     console.log(e.target.name, e.target.value);
     setUser({ ...user, [e.target.name]: e.target.value });
-    console.log(user);
   };
 
   const EditUserDetails = async () => {
@@ -56,21 +56,26 @@ const EditUser = (e) => {
     <>
       <Container>
         <Typography variant="h4">Edit User</Typography>
+
         <FormControl>
           <InputLabel>Name</InputLabel>
-          <Input onChange={(e) => OnValueChange(e)} name="name" value="name" />
-        </FormControl>
-        <FormControl>
-          <InputLabel>UserName</InputLabel>
           <Input
             onChange={(e) => OnValueChange(e)}
-            name="username"
-            value="username"
+            name="name"
+            value={user.name}
           />
         </FormControl>
         <FormControl>
+          <InputLabel>UserName</InputLabel>
+          <Input onChange={(e) => OnValueChange(e)} name="username" />
+        </FormControl>
+        <FormControl>
           <InputLabel>Email</InputLabel>
-          <Input onChange={(e) => OnValueChange(e)} name="email" />
+          <Input
+            onChange={(e) => OnValueChange(e)}
+            name="email"
+            value="phone"
+          />
         </FormControl>
         <FormControl>
           <InputLabel>Phone</InputLabel>
