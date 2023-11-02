@@ -19,3 +19,11 @@ export const getUsers = async () => {
     console.log("Eroor while callint getUSer api", error);
   }
 };
+
+export const getUser = async (id) => {
+  try {
+    return await axios.get(`${Url}/${id}`);
+  } catch (error) {
+    console.log("Error While Calling getUser Api", error);
+  }
+};
