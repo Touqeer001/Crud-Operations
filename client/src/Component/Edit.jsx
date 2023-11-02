@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import { addUser } from "./services/api";
-import { useNavigate } from "react-router-dom";
+import { addUser, getUser } from "./services/api";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   FormGroup,
   FormControl,
@@ -28,10 +28,18 @@ const UserDefault = {
   phone: "",
 };
 
-const AddUser = (e) => {
+const EditUser = (e) => {
   const [user, setUser] = useState({ UserDefault });
 
   const navigate = useNavigate(); //useNavigate ka used is liye krte h ke ager button pe click krte hi jo appi call ho rhi h wha pe chala jaye.
+  const { id } = useParams();
+  useEffect(() => {
+    loadUserDetails();
+  }, []);
+
+  const loadUserDetails = async () => {
+    const response = await getUser(id);
+  };
 
   const OnValueChange = (e) => {
     console.log(e.target.name, e.target.value);
@@ -50,11 +58,15 @@ const AddUser = (e) => {
         <Typography variant="h4">Edit User</Typography>
         <FormControl>
           <InputLabel>Name</InputLabel>
-          <Input onChange={(e) => OnValueChange(e)} name="name" />
+          <Input onChange={(e) => OnValueChange(e)} name="name" value="name" />
         </FormControl>
         <FormControl>
           <InputLabel>UserName</InputLabel>
-          <Input onChange={(e) => OnValueChange(e)} name="username" />
+          <Input
+            onChange={(e) => OnValueChange(e)}
+            name="username"
+            value="username"
+          />
         </FormControl>
         <FormControl>
           <InputLabel>Email</InputLabel>
@@ -66,7 +78,7 @@ const AddUser = (e) => {
         </FormControl>
         <FormControl>
           <Button variant="contained" onClick={() => EditUserDetails()}>
-            Add User
+            Edit User
           </Button>
         </FormControl>
       </Container>
