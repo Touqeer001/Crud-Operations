@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"; //useEffect ye 3 chizo se mil kr bana h ek "componentDidMount,ekComponentUpdate,or Ek ComponentMount."
+import { useEffect, useState } from "react"; //useEffect ye 3 chizo se mil kr bana h ek  "componentDidMount,ekComponentUpdate,or Ek ComponentMount."
 import {
   Table,
   TableHead,
