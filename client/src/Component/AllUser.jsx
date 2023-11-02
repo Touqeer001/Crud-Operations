@@ -8,6 +8,7 @@ import {
   Button,
 } from "@mui/material";
 import { getUsers } from "../Component/services/api.js";
+import { Link } from "react-router-dom";
 
 const AllUser = () => {
   const [users, setUsers] = useState([]); //Api ka sara data users me store ho gya h
@@ -41,7 +42,13 @@ const AllUser = () => {
               <TableCell>{user.email}</TableCell>
               <TableCell>{user.phone}</TableCell>
               <TableCell>
-                <Button variant="contained" style={{ marginRight: 10 }}>
+                {/* /*button ke saath routing used nhi kr sakte uske liye link to component ki trah treate kya jata hao. */}
+                <Button
+                  variant="contained"
+                  style={{ marginRight: 10 }}
+                  component={Link}
+                  to={`/edit/${user._id}`}
+                >
                   Edit
                 </Button>
                 <Button variant="contained">Delete</Button>
