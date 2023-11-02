@@ -1,4 +1,4 @@
-//Calling all api
+//Calling all api.
 
 import axios from "axios";
 const Url = "http://localhost:8000";
