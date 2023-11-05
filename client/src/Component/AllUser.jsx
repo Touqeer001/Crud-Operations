@@ -42,7 +42,7 @@ const AllUser = () => {
               <TableCell>{user.email}</TableCell>
               <TableCell>{user.phone}</TableCell>
               <TableCell>
-                {/* /*button ke saath routing used nhi kr sakte uske liye link to component ki trah treate kya jata hao..*/}
+                {/* /*button ke saath routing used nhi kr sakte uske liye link to component ki trah treate kya jata hao...*/}
                 <Button
                   variant="contained"
                   style={{ marginRight: 10 }}
