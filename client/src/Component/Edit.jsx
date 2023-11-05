@@ -67,7 +67,11 @@ const EditUser = (e) => {
         </FormControl>
         <FormControl>
           <InputLabel>UserName</InputLabel>
-          <Input onChange={(e) => OnValueChange(e)} name="username" />
+          <Input
+            onChange={(e) => OnValueChange(e)}
+            name="username"
+            value={user.username}
+          />
         </FormControl>
         <FormControl>
           <InputLabel>Email</InputLabel>
