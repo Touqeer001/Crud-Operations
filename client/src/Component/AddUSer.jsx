@@ -15,7 +15,7 @@ import {
 const Container = styled(FormGroup)`
   width: 50%;
 
-  // margin: auto; is a commonly used technique to horizontally center an element within its parent container..
+  // margin: auto; is a commonly used technique to horizontally center an element within its parent container...
   margin: 5% auto 0 auto;
   & > div {
     margin-top: 20px;
