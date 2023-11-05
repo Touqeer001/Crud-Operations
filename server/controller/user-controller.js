@@ -36,9 +36,20 @@ export const getUsers = async (request, response) => {
 
 export const getUSer = async (request, response) => {
   try {
-    const user = await User.find({ _id: request.params.id });
+    // const user = await User.find({ _id: request.params.id });
+    const user = await User.findById(request.params.id);
     response.status(200).json(user);
   } catch (error) {
     response.status(404).json({ message: error.message });
+  }
+};
+
+//this controller for edit user
+export const editUser = async (request, response) => {
+  let user = request.body;
+  const editUser = new User(user);
+  try {
+  } catch (error) {
+    response.status(404).json({ message: error.messege });
   }
 };
