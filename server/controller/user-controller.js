@@ -13,7 +13,7 @@ import User from "../Model/user-schema.js";
 
 export const addUser = async (request, response) => {
   const user = request.body;
-  //ager succesfully user validate krta h to use data base save karana padegaa
+  //ager succesfully user validate krta h to use data base save karana padegaa.
   const newUser = new User(user);
   try {
     await newUser.save(); //save ek mongodb ka function h jo saaredatabase ko savr kr degaa..
