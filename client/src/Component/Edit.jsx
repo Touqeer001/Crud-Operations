@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 
-import { addUser, getUser } from "./services/api";
+import { editUser, getUser } from "./services/api";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   FormGroup,
@@ -48,7 +48,7 @@ const EditUser = (e) => {
   };
 
   const EditUserDetails = async () => {
-    await addUser(user);
+    await editUser(user, id);
     navigate("/all");
   };
 
@@ -74,12 +74,16 @@ const EditUser = (e) => {
           <Input
             onChange={(e) => OnValueChange(e)}
             name="email"
-            value="phone"
+            value={user.email}
           />
         </FormControl>
         <FormControl>
           <InputLabel>Phone</InputLabel>
-          <Input onChange={(e) => OnValueChange(e)} name="phone" />
+          <Input
+            onChange={(e) => OnValueChange(e)}
+            name="phone"
+            value={user.phone}
+          />
         </FormControl>
         <FormControl>
           <Button variant="contained" onClick={() => EditUserDetails()}>
