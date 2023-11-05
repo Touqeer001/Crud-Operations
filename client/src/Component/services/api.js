@@ -10,7 +10,7 @@ export const addUser = async (data) => {
   }
 };
 
-// DataBase me se data ko nikalne ke leye GET APi ka used krte handleBreakpoints.
+// DataBase me se data ko nikalne ke leye GET APi ka used krte handleBreakpoints..
 
 export const getUsers = async () => {
   try {
