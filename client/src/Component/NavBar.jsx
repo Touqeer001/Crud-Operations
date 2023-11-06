@@ -19,7 +19,7 @@ const NavBar = () => {
     <>
       <Header position="static">
         <Toolbar>
-          <Tabs to="/">Crud-Operation.</Tabs>
+          <Tabs to="/">Crud-Operation...</Tabs>
           <Tabs to="/all">AllUser</Tabs>
           <Tabs to="/add">AddUser</Tabs>
         </Toolbar>
