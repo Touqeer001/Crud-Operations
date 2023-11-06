@@ -7,7 +7,7 @@
 //Post APi ke saath Body Bheja jata hai...
 //express ka server bydefault post api ko handle nhi karta uske ke liyee post api ki body hoti h usko parsse nhi kr paata.
 //uske liye ek pakage ko instaal krna padta hai "npm i body-parser"
-//jo bhi front end se body aayegi usko validate karna padta h ki front end aa kya rha h...validation ke ek schema bana padta h....
+//jo bhi front end se body aayegi usko validate karna padta h ki front end aa kya rha h...validation ke ek schema bana padta h..
 
 import User from "../Model/user-schema.js";
 
@@ -27,7 +27,7 @@ export const addUser = async (request, response) => {
 //
 export const getUsers = async (request, response) => {
   try {
-    const users = await User.find({}); //jitna bhi data database me save h wo sare data ko show kr dega...
+    const users = await User.find({}); //jitna bhi data database me save h wo sare data ko show kr dega.
     response.status(200).json(users);
   } catch (error) {
     response.status(404).json({ message: error.message });
