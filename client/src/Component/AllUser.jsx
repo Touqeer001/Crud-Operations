@@ -21,8 +21,9 @@ const AllUser = () => {
     let response = await getUsers(); //ye api h jo aa rhi h api.js file se.
     setUsers(response.data);
   };
-  const deleteUserDetails = async (_id) => {
-    await deleteUser(_id);
+  const deleteUserDetails = async (id) => {
+    await deleteUser(id);
+    getAllUsers();
   };
   return (
     <>
