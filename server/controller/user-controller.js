@@ -55,3 +55,15 @@ export const editUser = async (request, response) => {
     response.status(409).json({ message: error.messege });
   }
 };
+
+//this controller for edit user
+export const deleteUser = async (request, response) => {
+  // let user = request.body;
+  // const editUser = new User(user);
+  try {
+    await User.deleteOne({ _id: request.params.id });
+    response.status(200).json({ message: "user deleted succesfully" });
+  } catch (error) {
+    response.status(409).json({ message: error.messege });
+  }
+};
