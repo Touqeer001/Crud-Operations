@@ -31,7 +31,7 @@ const UserDefault = {
 const AddUser = (e) => {
   const [user, setUser] = useState({ UserDefault });
 
-  const navigate = useNavigate(); //useNavigate ka used is liye krte h ke ager button pe click krte hi jo appi call ho rhi h wha pe chala jaye.
+  const navigate = useNavigate(); //useNavigate ka used is liye krte h ke ager button pe click krte hi jo appi call ho rhi h wha pe chala.. jaye.
 
   const OnValueChange = (e) => {
     console.log(e.target.name, e.target.value);
