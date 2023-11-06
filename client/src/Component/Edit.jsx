@@ -31,7 +31,7 @@ const UserDefault = {
 const EditUser = (e) => {
   const [user, setUser] = useState({ UserDefault });
 
-  const navigate = useNavigate(); //useNavigate ka used is l iye krte h ke ager button pe click krte hi jo appi call ho rhi h wha pe chala jaye..
+  const navigate = useNavigate(); //useNavigate ka used is liye krte h ke ager button pe click krte hi jo appi call ho rhi h wha pe chala jaye..
   const { id } = useParams();
   useEffect(() => {
     loadUserDetails();
