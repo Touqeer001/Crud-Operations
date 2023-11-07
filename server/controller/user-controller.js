@@ -44,7 +44,7 @@ export const getUSer = async (request, response) => {
   }
 };
 
-//this controller for edit user
+//this controller for edit user..
 export const editUser = async (request, response) => {
   let user = request.body;
   const editUser = new User(user);
