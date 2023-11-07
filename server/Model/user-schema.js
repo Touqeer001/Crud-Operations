@@ -6,7 +6,7 @@ const userSchema = mongoose.Schema({
   email: String,
   phone: String,
 });
-//autoincrement se
+//autoincrement se...
 // autoIncrement.initialize(mongoose.connection);
 // userSchema.plugin(autoIncrement.plugin, "user");
 
