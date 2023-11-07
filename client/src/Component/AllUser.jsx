@@ -15,7 +15,7 @@ const AllUser = () => {
 
   useEffect(() => {
     getAllUsers();
-  }, []); //ye wali condition componentdidMount ki hoti h Empty array is liye pass kiye h ki ek baar call ho
+  }, []); //ye wali condition componentdidMount ki hoti h Empty array is liye pass kiye h ki ek baar call ho..
 
   const getAllUsers = async () => {
     let response = await getUsers(); //ye api h jo aa rhi h api.js file se.
