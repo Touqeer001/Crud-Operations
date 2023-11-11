@@ -6,11 +6,11 @@ export const addUser = async (data) => {
   try {
     return await axios.post(`${Url}/add`, data);
   } catch (error) {
-    console.log("Eroor while calling the Api addUser", error);
+    console.log("Eroor while calling the Api addUser ", error);
   }
 };
 
-// DataBase me se data ko nikalne ke leye GET APi ka used krte handleBreakpoints....
+// DataBase me se data ko nikalne ke leye GET APi ka used krte handleBreakpoints..
 
 export const getUsers = async () => {
   try {
